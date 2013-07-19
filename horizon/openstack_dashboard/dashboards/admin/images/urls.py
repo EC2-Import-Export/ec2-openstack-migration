@@ -35,6 +35,6 @@ urlpatterns = patterns('openstack_dashboard.dashboards.admin.images.views',
     url(r'^(?P<image_id>[^/]+)/update/$', UpdateView.as_view(), name='update'),
     url(r'^(?P<image_id>[^/]+)/detail/$', DetailView.as_view(), name='detail'),
     url(r'^(?P<image_id>[^/]+)/export/$', ExportView.as_view(), name='export'),
-    url(r'^(?P<image_id>[^/]+)/import/$', ImportView.as_view(), name='import')
+    url(r'^import/$', ImportView.as_view(), name='import')
 
 )

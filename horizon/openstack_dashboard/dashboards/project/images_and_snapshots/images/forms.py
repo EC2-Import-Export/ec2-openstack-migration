@@ -321,12 +321,12 @@ class ImportImageForm(forms.SelfHandlingForm):
     protected = forms.BooleanField(label=_("Protected"), required=False)
 
     def __init__(self, *args, **kwargs):
-        super(CreateImageForm, self).__init__(*args, **kwargs)
+        super(ImportImageForm, self).__init__(*args, **kwargs)
         if not settings.HORIZON_IMAGES_ALLOW_UPLOAD:
             self.fields['image_file'].widget = HiddenInput()
 
     def clean(self):
-        data = super(CreateImageForm, self).clean()
+        data = super(ImportImageForm, self).clean()
         if not data['copy_from'] and not data['image_file']:
             raise ValidationError(
                 _("A image or external image location must be specified."))

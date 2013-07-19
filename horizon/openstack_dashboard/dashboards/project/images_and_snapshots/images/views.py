@@ -101,7 +101,7 @@ class ExportView(forms.ModalFormView):
 class ImportView(forms.ModalFormView):
     form_class = ImportImageForm
     template_name = 'project/images_and_snapshots/images/import.html'
-    context_object_name = 'image'
+    context_object_name = 'import'
     success_url = reverse_lazy("horizon:project:images_and_snapshots:index")
 
 

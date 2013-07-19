@@ -90,7 +90,6 @@ class ImportView(views.ImportView):
     form_class = AdminImportImageForm
     success_url = reverse_lazy('horizon:admin:images:index')
 
-
 class DetailView(views.DetailView):
     """ Admin placeholder for image detail view. """
     pass
